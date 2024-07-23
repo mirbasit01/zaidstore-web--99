@@ -1,0 +1,656 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+  </head>
+  <body class="bg-white">
+    
+    <!-- nav bar -->
+    <nav class="navbar bg-white w-100 index-1 navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="logo.jpg" alt="Logo"></a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex serach-box mx-auto" role="search">
+            <input class="form-control border-0 shadow-none" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
+            <li class="nav-item">
+              <div class="btn-group">
+                <a type="button" class="btn shadow-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sign in / Join
+                </a>
+                <ul class="dropdown-menu border-dark">
+                  <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#signin">Sign in</button></li>
+                  <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registeraccount">Register</button></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="btn-group">
+                <a type="button" class="btn d-flex border-white align-items-center shadow-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="heart.svg" style="width:30px;" alt="Heart">
+                  <span class="position-absolute whislites-position">0</span>
+                </a>
+                <ul class="dropdown-menu border-dark"></ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group">
+                <a type="button" class="btn d-flex border-white align-items-center shadow-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="cart.svg" style="width:30px; margin-top:-5px;" alt="Cart">
+                  <span class="position-absolute whislites-position">0</span>
+                </a>
+                <ul class="dropdown-menu border-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav bg-white shadow">
+       <div class="container">
+       <ul class="d-md-flex d-none list-unstyled justify-content-between py-2 p-2">
+            <li><a href="index.html" class="text-decoration-none fw-bold text-success">Home</a></li>
+            <li><a href="product.html" class="text-decoration-none fw-bold text-success">Product</a></li>
+            <li><a href="#" class="text-decoration-none fw-bold text-success">Checkout</a></li>
+            <li><a href="#" class="text-decoration-none fw-bold text-success">Whishlight</a></li>
+            <li><a href="#" class="text-decoration-none fw-bold text-success">Cart</a></li>
+            <li><a href="#" class="text-decoration-none fw-bold text-success">About Us</a></li>
+            <li><a href="#" class="text-decoration-none fw-bold text-success">Contact Us</a></li>
+        </ul>
+        <!-- Button trigger modal -->
+            <button type="button" class="btn d-md-none d-block d-flex align-items-center gap-3" data-bs-toggle="modal" data-bs-target="#menu">
+               <span class="fw-bold">Menu</span> <i class="bi bi-list fw-bold fs-4"></i>
+            </button>
+       </div>
+    </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="menu" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Menu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container w-100">
+                            <ul class="list-unstyled text-center gap-4 justify-content-center">
+                                <li class="bg-light mt-5"><a href="#" class="text-decoration-none fs-3 fw-bold text-success">Home</a></li>
+                                <li class="bg-light mt-5"><a href="#" class="text-decoration-none fs-3 fw-bold text-success">Product</a></li>
+                                <li class="bg-light mt-5"><a href="#" class="text-decoration-none fs-3 fw-bold text-success">Checkout</a></li>
+                                <li class="bg-light mt-5"><a href="#" class="text-decoration-none fs-3 fw-bold text-success">Whishlight</a></li>
+                                <li class="bg-light mt-5"><a href="#" class="text-decoration-none fs-3 fw-bold text-success">Cart</a></li>
+                                <li class="bg-light mt-5"><a href="#" class="text-decoration-none fs-3 fw-bold text-success">About Us</a></li>
+                                <li class="bg-light mt-5"><a href="#" class="text-decoration-none fs-3 fw-bold text-success">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Modal -->
+        <div class="modal fade" id="registeraccount" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Register Your Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="username">User Name</label>
+                                        <input type="text" class="form-control shadow-none" id="username">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control shadow-none" id="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control shadow-none" id="password">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirm-password">Confirm Password</label>
+                                        <input type="password" class="form-control shadow-none" id="confirm-password">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign in Modal -->
+        <div class="modal fade" id="signin" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign in to Your Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="mb-3 mt-3">
+                                <label for="signin-email">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control shadow-none" id="signin-email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="signin-password">Password <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control shadow-none" id="signin-password">
+                            </div>
+                            <div class="mb-2">
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" class="btn btn-primary form-control shadow-none" value="Sign in">
+                            </div>
+                            <div>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#registeraccount" data-bs-dismiss="modal">Register an Account</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- Swiper -->
+
+    <div class="container">
+        <!-- main carousal -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="h">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><img src="swip1.jpeg" class="w-100 object-fit-cover" ></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="swip2.jpeg" class="w-100"></a></div>
+                                    <div class="swiper-slide"><a href="#"><img src="swip3.jpeg" class="w-100"></a></div>
+                                        <div class="swiper-slide"><a href="#"><img src="swip3.jpeg" class="w-100"></a></div>                                       
+                                    </div>
+                                <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product craousal -->
+        <div class="row justify-content-between  d-flex ">
+            <h2 class="text-center mt-4 mb-3 fw-bold fs-2">New Arrivals</h2>
+                              <!-- Swiper -->
+
+                              <div class="container mb-3">
+          <div class="swiper cardswiper">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                </div>          
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            
+
+          </div>
+
+
+            <h2 class="text-center mt-4 mb-3 fw-bold fs-2">Our Product</h2>
+               <!-- Swiper -->
+          <div class="container mb-3">
+          <div class="swiper cardswiper">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                </div>          
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            
+
+          </div>
+          <div class="container">
+          <div class="swiper cardswiper">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                        <div class="card  rounded-0">
+                            <div class="position-relative">
+                                <img src="product2.avif" class="card-img-top main-img rounded-0 w-100" style="height: 400px;">
+                                <img src="product3.avif" class="card-img-top hover-img rounded-0 w-100" style="height: 400px;">
+                                <div class="hover-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
+                                    <a href="#" class="bg-light opacity-50 text-decoration-none fw-bold text-dark text-center w-100 p-2">Quick details</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class=" " style="background-color: #F8F6F6;"><span class="text-danger">Rs</span>-/ <span class="f-5 fw-bold">300</span></p>
+                                <p style="font-size: 14px;" class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <a href="" class="btn btn-outline-success mb-3">Add to cart</a>
+                            </div>
+                    </div>
+                </div>
+                </div>          
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            
+
+          </div>
+
+
+        </div>
+  
+   
+        <footer class="footer mt-5">
+            <div class="container">
+            <div class="row">
+            <div class="col-md-4 col-lg-4 mt-5 d-flex justify-content-center flex-column align-items-center">
+                     <img src="logo.jpg" alt="">
+                     <div class="flex-column d-flex mt-4">
+                     <a href="#" class="text-decoration-none text-success fw-bold">Returns/Refunds</a>
+                     <a href="#" class="text-decoration-none mt-2 text-success fw-bold">Payment method</a>
+                     </div>
+                 </div>
+                 <div class="col-md-4 col-lg-4 flex-column   d-flex justify-content-center align-items-center" style="margin-top: 130px;">
+                  <h4 class="fw-bold my-l-3">Pages</h4>
+                     <div class="flex-column mt-3 d-flex">
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold">Sign-in/Register</a>
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold">My Favourites</a>
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold">Returns/Refunds</a>
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold">Terms & Conditions</a>
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold">Privacy Policy</a>
+                     </div>
+                 </div>
+                 <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center align-items-center"  style="margin-top: 130px;">
+                  <h4 class="fw-bold">Contact Us</h4>
+                     <div class="d-flex flex-column">
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold"><i class="bi fs-4 bi-facebook"></i> Facebook</a>
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold"><i class="bi fs-4 bi-instagram"></i> Instagram</a>
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold"><i class="bi fs-4 bi-twitter"></i> Twitter</a>
+                         <a href="#" class="text-decoration-none text-success mt-2 fw-bold"><i class="bi bi-envelope-at-fill"></i> E-mail</a>
+                     </div>
+                 </div>
+              
+             <div class="row">
+                 <div class="col-md-12  mt-3 mb-2 bg-light d-flex justify-content-center align-items-center ">
+                 © Missrebel. All Rights Reserved.
+                 </div>
+             </div>
+            </div>
+         </footer>
+     
+             
+         </div>
+     
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+          <!-- Swiper JS -->
+       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+       
+       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     
+     
+     <!-- Initialize Swiper -->
+     <script>
+     var swiper = new Swiper(".mySwiper", {
+       cssMode: true,
+       loop:true,
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+       },
+       pagination: {
+         el: ".swiper-pagination",
+       },
+       mousewheel: true,
+       keyboard: true,
+       autoplay: {
+         delay: 2500,  // 2.5 seconds
+         disableOnInteraction: false,  // Continue autoplay after interaction
+       },
+     });
+     
+     </script>
+     <script>
+             var swiper = new Swiper('.cardswiper', {
+     
+                 slidesPerView: 4,
+                 spaceBetween: 30,
+                 pagination: {
+                     el: '.swiper-pagination',
+                     clickable: true,
+                 },
+                 breakpoints: {
+             // when window width is <= 480px
+             480: {
+                 slidesPerView: 1,
+                 spaceBetween: 10,
+             },
+             // when window width is <= 768px
+             768: {
+                 slidesPerView: 2,
+                 spaceBetween: 20,
+             },
+             // when window width is <= 1024px
+             1024: {
+                 slidesPerView: 3,
+                 spaceBetween: 30,
+             },
+             // when window width is > 1024px
+             1200: {
+                 slidesPerView: 4,
+                 spaceBetween: 40,
+             },
+         },
+     });
+         </script>
+          <script>
+        var swiper = new Swiper(".carwiper", {
+         autoplay: {
+             delay: 3000, // 3000 milliseconds = 3 seconds
+             disableOnInteraction: false, // Keeps autoplay running even after user interactions
+         },
+     });
+     
+       </script>
+       </body>
+     </html>
+     
